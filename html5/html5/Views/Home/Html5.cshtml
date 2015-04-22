@@ -8,34 +8,12 @@
 <html>
 <head>
     <title>HTML 5</title>
-    
     <link rel="stylesheet" type="text/css" href="~/Content/Html5.css" />
-    <script>
-        function showPosition() {
-            var x = document.getElementById("geo");
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (p) {
-                    x.innerHTML = "Latitude:" + p.coords.latitude + "<br>Longitude:" + p.coords.longitude;
-                }, function (err) { alter(err.message); });
-            } else { x.innerHTML = "No GEO"; }
-        }
-    </script>
-
 </head>
 <body>
     <header>
-        <div>
-            <ul id="menu">
-                <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                <li>@Html.ActionLink("Новостная лента", "Html5", "Home")</li>
-                <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
-            </ul>
-        </div>
-        <h1>Новостной портал</h1>
-        <span id="geo"></span>
+        <h1>Новостная лента</h1>
     </header>
-    <input type="button" value="Show my location" onclick="showPosition()" />
-
     <section>
         <article>
             <h2>День Победы</h2>
