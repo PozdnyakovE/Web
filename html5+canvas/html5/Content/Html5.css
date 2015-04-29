@@ -1,0 +1,24 @@
+﻿header {
+    align-content: center;
+    color: grey;
+}
+
+nav {
+    color: black;
+}
+
+article {
+    color: red;
+    
+}
+
+aside {
+    align-content:flex-end;
+    color: gray;
+}
+h2{
+    color:red;
+}
+h1{
+    color:gray;
+}

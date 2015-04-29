@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showPosition() {
+            var x = document.getElementById("geo");
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (p) {
+                    x.innerHTML = "Latitude:" + p.coords.latitude + "<br>Longitude:" + p.coords.longitude;
+                }, function (err) { alter(err.message); });
+            } else { x.innerHTML = "No GEO"; }
+        }
+    </script>
+</head>
+<body>
+    <span id="geo"></span>
+    <input type="button" value="Show my location" onclick="showPosition()" />
+
+    <section class="contact">
+        <header>
+            <h3>Links</h3>
+        </header>
+        <p>Ural Federal University</p>
+        <p>
+            <span class="label">Email</span>
+            <span><a href="mailto:vz174@mail.ru">vz174@mail.ru</a></span>
+        </p>
+
+    </section>
+    
+</body>
+</html>
+
