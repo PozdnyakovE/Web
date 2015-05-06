@@ -1,0 +1,7 @@
+{
+    success: true,
+    products: [
+        {id: 1, name: 'Ботинки', country: 'Китай', price: 10, price_dol: price*50, quantity: 520},
+        {id: 2, name: 'Сапоги',country: 'Индия', price: 200, price_dol: price*50, quantity: 654}
+    ]
+}
