@@ -1,4 +1,5 @@
-﻿var sunx = 10;
+﻿
+var sunx = 10;
 var suny = 10;
 var moonx = 775;
 var moony = 385;
@@ -188,6 +189,7 @@ function initiate() {
         moonx = 775;
         moony = 385;
     }*/
+
 }
 
 addEventListener("load", initiate);
