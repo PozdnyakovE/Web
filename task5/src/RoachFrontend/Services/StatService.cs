@@ -32,7 +32,7 @@ namespace RoachFrontend.Services
 
         public IEnumerable<UserStat> GetStatistics()
         {
-            using (var da = new SqlDataAdapter("SELECT * FROM dbo.UserStat", conn))
+            using (var da = new SqlDataAdapter("SELECT * FROM Bikes.dbo.UserStat", conn))
             {
                 //Объект для записи данных
                 var data = new DataTable();
@@ -52,7 +52,7 @@ namespace RoachFrontend.Services
 
         public void AddStat(UserStat userStat)
         {
-            using (var da = new SqlDataAdapter("SELECT * FROM dbo.UserStat", conn))
+            using (var da = new SqlDataAdapter("SELECT * FROM Bikes.dbo.UserStat", conn))
             {
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey; // Для получения метаинформации из БД
                 //Объект, который сгенерирует команды встави и обновления
@@ -69,6 +69,7 @@ namespace RoachFrontend.Services
                 {
                     row = data.NewRow();
                     row["UserID"] = userStat.UserId;//Нужно установить первичный ключ
+                    row["Money"] = 0;
                     data.Rows.Add(row);
                 }
                 //Установим св-ва
