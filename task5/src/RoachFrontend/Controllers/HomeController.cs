@@ -57,6 +57,15 @@ namespace RoachFrontend.Controllers
             statistics.Add(userStat);
             return Content("OK");
         }*/
+        public ActionResult Register(string data)
+        {
+            var regis = JsonConvert.DeserializeObject<UserModel>(data);
+            using (var usrsvc = new UserService(WebConfigurationManager.ConnectionStrings["db"].ConnectionString))
+            {
+                usrsvc.RegisterUser(regis);
+            }
+            return Content("OK");
+        }
         public ActionResult Stats()
         {
            
