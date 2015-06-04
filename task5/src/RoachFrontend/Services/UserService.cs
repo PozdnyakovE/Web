@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using RoachFrontend.Models;
+using System.Windows;
 
 namespace RoachFrontend.Services
 {
@@ -67,6 +68,11 @@ namespace RoachFrontend.Services
                //1. Строка уже есть в БД, тогда её нужно обновить
                //2. Строки нет в БД, тогда её нужно создать
                 DataRow row = data.Rows.Find(regis.id);//Поищем строку по первичному ключу
+                /*if (row != null)
+                {
+                    
+                }*/
+                    
                 if (row == null) // Строки нет, создадим её
                 {
                     row = data.NewRow();
